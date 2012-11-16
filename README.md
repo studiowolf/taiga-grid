@@ -1,22 +1,15 @@
 Taiga Grid
 ====================
 
-Taiga is a small boilerplate that works on SASS with an awesome semantic fluid grid.
+Taiga Grid is a semantic fluid grid bases on SASS.
 
-* Basic HTML5/CSS3 Boilerplate;
+* Basic HTML5/CSS3 Grid;
 * Using SASS;
 * Semantic fluid grid;
 * Responsive, using em units;
 * Everything is border-box;
-* Basic types like forms, tables etc;
-* Comes with flexible CSS3 mixins;
 
 Website is http://taigaboilerplate.com or Github https://github.com/AljanScholtens/Taiga
-
-Why Taiga?
----------------------
-
-As an interface designer and engineer I wanted to create an HTML5/CSS3 environment that easily sets up the basics of a responsive web application or website. It needed a grid that is flexible and fluid. Also some basic types like forms en tables would really speed up my workflow in combination with simple mixins. That's why I created Taiga, an environment to love.
 
 Set up Taiga
 ---------------------
@@ -49,4 +42,4 @@ Just change your padding on your block element and you don't have to change the 
 Thanks
 ---------------------
 Taiga was inspired by these awesome people: Miller Medeiros, Paul Irish, Olav Bjorkoy and Emil Loer.
-If you have any questions or suggestions, e-mail me at aljan@studiowolf.nl or ask it on github.
+If you have any questions or suggestions, e-mail me at aljan@studiowolf.nl or ask it on github. 
