@@ -80,6 +80,7 @@ html, body, div, span, applet, object, iframe, p, blockquote, pre, a, abbr, acro
 html { 
     color: #333;
     font: $font-size 'Helvetica Neue', Arial, sans-serif;
+    -webkit-font-size-adjust: 100%;
 }
 
 body { 
