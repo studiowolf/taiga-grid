@@ -15,13 +15,13 @@ $max-width: auto;
 // Set a standard margin-bottom
 $margin-bottom: 1.25em;
 
-// Set up mobile-first or desktop-first
-$media-type: max-width;
-$media-desktop: 960px;
+// Set up mobile-first breakpoints
+$media-type: min-width;
+$media-tablet-portrait: 590px;
 $media-tablet: 767px;
-$media-phone: 520px;
+$media-desktop: 960px;
 
-// Use '@include grid(12, 2)' to make a column. 
+// Use '@include grid(12, 2)' to make a column.
 // The first unit (12) is the column width.
 // The second unit (2) is the margin on both sides.
 // The margin will be auto substracted from the column width.
@@ -31,11 +31,11 @@ $media-phone: 520px;
 // You can also use negative margins.
 
 $max-width: ($max-width / $font-size) + em;
-$grid-column: 100% / $grid-columns; 
+$grid-column: 100% / $grid-columns;
 
-@mixin col($n: 1) { float: left; width: ($n * $grid-column); } 
-@mixin prepend($n: 1) { margin-left: $grid-column * $n } 
-@mixin append($n: 1) { margin-right: $grid-column * $n } 
+@mixin col($n: 1) { float: left; width: ($n * $grid-column); }
+@mixin prepend($n: 1) { margin-left: $grid-column * $n }
+@mixin append($n: 1) { margin-right: $grid-column * $n }
 
 @mixin grid($cols: 1, $grid-margin-left: 0, $grid-margin-right: $grid-margin-left) {
     @include col($cols - ($grid-margin-left + $grid-margin-right));
@@ -60,62 +60,58 @@ $grid-column: 100% / $grid-columns;
 }
 
 
-// =========== Base 
+// =========== Base
 
-html, body, div, span, applet, object, iframe, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { 
-    margin: 0; 
-    padding: 0; 
-    border: 0; 
-    font-size: 100%; 
-    font: inherit; 
-    vertical-align: baseline; 
+html, body, div, span, applet, object, iframe, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 
-* { 
+* {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
-html { 
+html {
     color: #333;
     font: $font-size 'Helvetica Neue', Arial, sans-serif;
     -webkit-font-size-adjust: 100%;
 }
 
-body { 
-    line-height: 1.5em; 
-    @media only screen and ($media-type: $media-desktop) { font-size: 15px; }
-    @media only screen and ($media-type: $media-phone) { font-size: 14px; }
+body {
+    line-height: 1.5em;
+    @media only screen and ($media-type: $media-tablet-portrait) { font-size: 17px; }
+    @media only screen and ($media-type: $media-tablet) { font-size: 18px; }
 }
 
 p { margin-bottom: $margin-bottom; }
 
 
-// =========== Layout 
+// =========== Layout
 
-.l-full { 
-    @include grid(48, 1); 
-    @media only screen and ($media-type: $media-phone) { @include grid-reset; }
+.l-full {
+    @media only screen and ($media-type: $media-tablet-portrait) { @include grid(48, 1); }
 }
-.l-two-third { 
-    @include grid(32, 1); 
-    @media only screen and ($media-type: $media-phone) { @include grid-reset; }
+.l-two-third {
+    @media only screen and ($media-type: $media-tablet-portrait) { @include grid(32, 1); }
 }
-.l-half { 
-    @include grid(24, 1); 
-    @media only screen and ($media-type: $media-phone) { @include grid-reset; }
+.l-half {
+    @media only screen and ($media-type: $media-tablet-portrait) { @include grid(24, 1); }
 }
-.l-one-third { 
-    @include grid(16, 1); 
-    @media only screen and ($media-type: $media-phone) { @include grid-reset; }
+.l-one-third {
+    @media only screen and ($media-type: $media-tablet-portrait) { @include grid(16, 1);  }
 }
 .l- { } // Add your own
 
 .l-first { clear: left; }
 
 div.container {
-    @include clearfix; 
+    @include clearfix;
     max-width: $max-width;
     margin: auto;
     padding: 2.5em;
