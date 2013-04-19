@@ -13,7 +13,7 @@ $grid-columns: 48;
 $max-width: auto;
 
 // Set a standard margin-bottom
-$margin-bottom: 1.25em;
+$vertical-spacing: 1.25em;
 
 // Set up mobile-first breakpoints
 $media-type: min-width;
@@ -89,7 +89,7 @@ body {
     @media only screen and ($media-type: $media-tablet) { font-size: 18px; }
 }
 
-p { margin-bottom: $margin-bottom; }
+p { margin-bottom: $vertical-spacing; }
 
 
 // =========== Layout
