@@ -15,11 +15,13 @@ $max-width: auto;
 // Set a standard margin-bottom
 $vertical-spacing: 1.25em;
 
-// Set up mobile-first breakpoints
-$media-type: min-width;
-$media-tablet-portrait: 590px;
-$media-tablet: 767px;
-$media-desktop: 960px;
+// Media queries
+// Adjust them to you needs or add more
+$breakpoint-10: 600px;
+$breakpoint-20: 750px;
+$breakpoint-30: 1000px;
+$breakpoint-40: 1200px;
+
 
 // Use '@include grid(12, 2)' to make a column.
 // The first unit (12) is the column width.
@@ -84,8 +86,8 @@ html {
 
 body {
     line-height: 1.5em;
-    @media only screen and ($media-type: $media-tablet-portrait) { font-size: 17px; }
-    @media only screen and ($media-type: $media-tablet) { font-size: 18px; }
+    @media only screen and (min-width: $breakpoint-10) { font-size: 17px; }
+    @media only screen and (min-width: $breakpoint-20) { font-size: 18px; }
 }
 
 p { margin-bottom: $vertical-spacing; }
@@ -94,16 +96,16 @@ p { margin-bottom: $vertical-spacing; }
 // =========== Layout
 
 .l-full {
-    @media only screen and ($media-type: $media-tablet-portrait) { @include grid(48, 1); }
+    @media only screen and (min-width: $breakpoint-10) { @include grid(48, 1); }
 }
 .l-two-third {
-    @media only screen and ($media-type: $media-tablet-portrait) { @include grid(32, 1); }
+    @media only screen and (min-width: $breakpoint-10) { @include grid(32, 1); }
 }
 .l-half {
-    @media only screen and ($media-type: $media-tablet-portrait) { @include grid(24, 1); }
+    @media only screen and (min-width: $breakpoint-10) { @include grid(24, 1); }
 }
 .l-one-third {
-    @media only screen and ($media-type: $media-tablet-portrait) { @include grid(16, 1);  }
+    @media only screen and (min-width: $breakpoint-10) { @include grid(16, 1);  }
 }
 .l- { } // Add your own
 
